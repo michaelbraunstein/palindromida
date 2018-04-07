@@ -9,6 +9,9 @@ CISS 290 Wohhleber */
 #include<iostream>
 #include<iomanip>
 
+#include <stdio.h>
+#include <string.h>
+
 using namespace std;
  
  
@@ -41,7 +44,7 @@ void punct(char p1) {
 
 		int i;
 		char local[66];
-		char* tokenptr = strtok(p1, " ,.!?;:+");
+		char tokenptr = strtok(p1, " ,.!?;:+");
 		while (tokenptr != '\0') {
 			strcat(p1, tokenptr);
 			cout << ' ';
@@ -66,19 +69,19 @@ void capt(char p1) {
 
 	//palindrome check return type bool
 
-bool ispal(char p1) {
+bool ispal(char p2, int i) {
 			bool rtrn = true;
-			for (i = p1.length + 1, i = !'\0'; i--) {
+			for (i = p1.length + 1, i = !'\0'; i--); {
 				p2.append = char p1.at(i);
 			}
 
 	//for (int i = 0; i < p1.length / 2; i++) {
 		//if (p1[i] != p1[p1.length(1 + i)]) {
 			rtrn = false;
-			break;
+			// break;
 		}
-	}
-	}
+	
+
 
 
 
