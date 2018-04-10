@@ -66,20 +66,21 @@ void main() {
 
 void punct(char p1[]) {
 
+	char local[66]="";
 		
-		char local[66];
 		cout << "debug 10 \n"; //debug************************************************************************
 		cout << local;
 		char *tokenptr = strtok(p1, " ,.!?;:+");
 		cout << p1;
 		while (tokenptr != '\0') {
-			strcat(p1, tokenptr);
+			strcat(local, tokenptr);
 			cout << p1;
 			cout << tokenptr;
 			cout << ' ';
 			tokenptr = strtok('\0', " ,.!?;:+");
-
+			
 		}
+		strcpy(p1,local);
 	}
 
 	//remove capitalization,   
@@ -88,7 +89,7 @@ void capt(char input_string[]) {
 		int i;
 		cout << "debug 20 \n"; //debug************************************************************************
 		//p1.size=(char p1.length()); {
-		for (i = strlen(input_string) - 1; i = 0; i--) {
+		for (i = strlen(input_string) - 1; i >= 0; i--) {
 			input_string[i] = tolower(input_string[i]);
 		}
 
@@ -103,15 +104,20 @@ void capt(char input_string[]) {
 	//palindrome check return type bool
 
 bool ispal(char p1[]) {
-
+	int i = 0;
 	cout << "debug 30 \n"; //debug************************************************************************
-	//char p2[63];
-//		int j = 0;
-//			bool rtrn = true;
-//			for (i = p1[].length + 1, i = !'\0'; i--); {
-//				p2[j] = p1[i];
-	return false;
-			}
+	char p2[63];
+	int j = 0;
+	bool rtrn = true;
+	for (i = strlen(p1) - 1; i >= 0; i--); {
+		p2[j] = p1[i];
+		j++;
+		
+	}
+	if strcmp ( p1 = p2 ) return true;
+	
+	else if	strcmp (p1 != p2)	return false;
+}
 
 	//for (int i = 0; i < p1.length / 2; i++) {
 		//if (p1[i] != p1[p1.length(1 + i)]) {
